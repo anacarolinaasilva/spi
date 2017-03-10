@@ -1,0 +1,15 @@
+@mixin linx ($topmenu-link, $topmenu-hover, $topmenu-active) {
+  a {
+    color: $topmenu-link;
+    &:hover {
+      color: $topmenu-hover;
+      border-bottom: 0.075em inset #0a5f9f;
+      background: transparent;
+    }
+    &:active {
+      color: $topmenu-active;
+      border-bottom: 0.075em inset #0a5f9f;
+      background: transparent;
+    }
+  }
+}

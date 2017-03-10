@@ -1,0 +1,82 @@
+.phone-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: #f8b504;
+}
+
+//MENU
+#topLevel-menu {
+  position: relative;
+  height: auto;
+  line-height: normal;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  box-shadow: none;
+}
+
+#topLevel-menu ul li{
+    float: none;
+    margin: 0 -3px;
+    line-height: normal;
+    color: #202221;
+}
+
+#topLevel-menu ul, #topLevel-menu ul li{
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  @include linx($text-color, $primary-color, $secondary-color);
+}
+
+.caption-slider-top{
+  position:absolute;
+  top:35px;
+}
+
+.caption-slider-top h1.header-slider{
+   font-size: 30px;
+   text-transform: uppercase;
+   font-weight: 800;
+   margin-left: 30px;
+   font-family: "gotham-black";
+   font-style: italic;
+}
+
+.caption-slider-bottom {
+  position:absolute;
+  top:150px;
+  margin-left: 30px;
+
+}
+
+.caption-slider-bottom p{
+
+}
+
+
+.catalog-call-action{
+   margin: 0 auto;
+
+}
+
+.blue{
+  background-color:$secondary-color;
+}
+.yellow{
+  background-color:$primary-color;
+}
+.gray{
+    background-color:$text-color !important;
+}
+
+
+.highlight{
+  color:$primary-color;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}

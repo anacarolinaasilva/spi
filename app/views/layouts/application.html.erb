@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpiRails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.carousel.carousel-slider').carousel(
+          {
+            fullWidth: true
+          });
+    });
+    </script>
+  </body>
+</html>
