@@ -12,9 +12,9 @@
  *
  *= require_self
  */
+ @import "materialize";
+ @import "variables.scss";
  @import "layout.scss";
  @import "mixins.scss";
- @import "variables.scss";
  @import "custom.scss";
  @import "font.scss";
- @import "materialize";

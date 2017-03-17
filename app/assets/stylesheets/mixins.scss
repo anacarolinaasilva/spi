@@ -13,3 +13,48 @@
     }
   }
 }
+
+@mixin arrow-circle($color: $secondary-color, $radius: $ternary-color){
+  background-color: $secondary-color;
+  radius: $radius;
+
+}
+
+@mixin apply-to-ie-6{
+  * html {
+    @content;
+  }
+}
+
+
+@mixin phone-number($font-size:60px, $font-family: $text-font-black){
+  font-size:  $font-size;
+  font-family: $font-family;
+}
+
+
+
+//
+// @mixin tiny-screens(){
+//  @media only screen and (max-width: 320px){
+//   @content;
+//   }
+//  }
+//
+// @mixin small-screens(){
+//  @media only screen and (max-width: 480px){
+//    @content;
+//    }
+//   }
+//
+// @mixin medium-screens(){
+//  @media only screen and (max-width: 680px){
+//     @content;
+//     }
+//    }
+//
+// @mixin large-screens(){
+//  @media only screen and (max-width: 960px){
+//      @content;
+//      }
+//     }

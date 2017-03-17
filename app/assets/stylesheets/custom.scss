@@ -1,17 +1,138 @@
-.phone-number {
-  font-size: 40px;
-  font-weight: 800;
-  color: #f8b504;
+@include apply-to-ie-6{
+  body{
+    //any content here font-size:125%
+  }
 }
+
+body {
+  font-family: $text-font;
+  color: $text-color-gray;
+}
+
+a {
+  color: $link-color;
+}
+
+.mainLogo-wrap{
+  display: block;
+  float: left;
+  position: relative;
+  img{
+    display: block;
+    max-width:none;
+    @media #{$small-and-down}{
+      max-width: 200px;
+    }
+  }
+}
+
+.phone-number {
+  color: $primary-color;
+
+}
+
+.first-img {
+     background-size: contain  !important;
+     background-position: right top !important;
+     background-repeat: no-repeat !important;
+}
+
+span.header-wrap{
+
+    margin-bottom: 5px  !important;
+    margin: 0 auto !important;
+    display: inline-block;
+}
+
+.slide-height{
+  height:500px !important;
+}
+
+h2.header-1 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: $text-font-bold;
+    color: $text-color-gray !important;
+    border-bottom: 3px solid $text-color-yellow  !important;
+    padding-bottom: 10px;
+}
+
+h3.header-2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-family: $text-font-bold;
+  color: $text-color-gray !important;
+  border-bottom: 2px solid $text-color-yellow;
+}
+
+h2.header-white-black{
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: $text-font-bold;
+  color: #fff;
+}
+
+.easy-steps p{
+  font-size: 70px;
+}
+
+  @media #{$small-and-down} {
+     .phone-number {
+      @include phone-number($text-tiny, $text-font-thin)
+     }
+  }
+  @media #{$medium-and-up} {
+    .phone-number {
+     @include phone-number($text-small, $text-font-medium)
+   }
+  }
+  @media #{$medium-and-down} {
+    .phone-number {
+        @include phone-number($text-medium, $text-font-medium)
+    }
+  }
+  @media #{$large-and-up} {
+   .phone-number {
+       @include phone-number(60px, $text-font-medium)
+   }
+  }
+
+
+  // @include medium-screens{
+  //     font-medium: $text-medium;
+  //     font-family: $text-font-bold;
+  // }
+  // @include small-screens{
+  //     font-medium: $text-small;
+  //     font-family: $text-font-bold;
+  // }
+  // @include tiny-screens{
+  //     font-medium: $text-tiny;
+  //     font-family: $text-font-medium;
+  // }
+
+// @media #{$small-and-down} {
+//     // styles for small screens and down
+//   }
+// @media #{$medium-and-up} {
+//     // styles for medium screens and larger
+//   }
+// @media #{$medium-and-down} {
+//     // styles for medium screens and down
+//   }
+// @media #{$large-and-up} {
+//     // styles for large screens and up
+//   }
 
 //MENU
 #topLevel-menu {
   position: relative;
   height: auto;
   line-height: normal;
-  display: inline-block;
-  float: left;
-  text-align: center;
+  //display: inline-block;
+  //float: left;
+  //text-align: center;
   box-shadow: none;
 }
 
@@ -23,60 +144,223 @@
 }
 
 #topLevel-menu ul, #topLevel-menu ul li{
-  white-space: nowrap;
-  display: inline-block;
-  width: auto;
-  @include linx($text-color, $primary-color, $secondary-color);
+  //white-space: nowrap;
+  //display: inline-block;
+  //width: auto;
+  @include linx($text-color-gray, $primary-color, $secondary-color);
 }
+
+#topLevel-menu ul li a{
+  padding: 6px 8px;
+  border-bottom: 1px solid transparentize(#fefefe, 1);
+  transition: border-bottom 0.5s;
+  &:hover {
+  border-bottom: 1px solid opacify(#fefefe, .5);
+  }
+}
+
+.side-nav{
+  text-align: center;
+}
+
+i.icon-yellow{
+  color:$primary-color;
+}
+
+.button-collapse-wrap{
+  float: left;
+  height: 56px;
+  margin: -16px 0 -16px -10px;
+  padding: 16px 0 16px 10px;
+  overflow: hidden;
+}
+
 
 .caption-slider-top{
   position:absolute;
   top:35px;
+  left: -100px;
+}
+
+.text-color-yellow{
+  color: $text-color-yellow;
 }
 
 .caption-slider-top h1.header-slider{
-   font-size: 30px;
+   font-size: 45px;
    text-transform: uppercase;
    font-weight: 800;
-   margin-left: 30px;
-   font-family: "gotham-black";
-   font-style: italic;
+   font-family: $text-font-black;
+   color: $text-color-yellow;
+   letter-spacing: -1px;
+
 }
 
 .caption-slider-bottom {
   position:absolute;
   top:150px;
-  margin-left: 30px;
+  left: -100px;
 
 }
 
 .caption-slider-bottom p{
-
+  font-family: $text-font-thin;
+  color: $text-color-gray !important;
+  font-size: 24px;
 }
-
 
 .catalog-call-action{
    margin: 0 auto;
 
 }
 
+
+.carousel-item .testimonial{
+  font-size: 44px !important;
+  font-family: $text-font-thin;
+  font-style: italic;
+  .bold {
+    font-family: $text-font-bold;
+  }
+}
+
+.carousel-item  .quote{
+  font-size: 200px;
+  font-family: times, Verdana;
+
+}
+
+// === Blue ===
 .blue{
   background-color:$secondary-color;
 }
-.yellow{
-  background-color:$primary-color;
+.font-blue{
+  color:$text-color-blue;
 }
+.font-yellow{
+  color:$text-color-yellow;
+}
+.font-thin{
+  font-family: $text-font-thin;
+}
+//=== Headers Font Style ===
+.header-white{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: -1.0rem 0 1.0rem 0;
+}
+
+.header-dark-yellow{
+  color: #c18610;
+  text-transform: uppercase;
+  font-size: 52px;
+  font-family: $text-font-black;
+  color: rgba(193, 134, 16, 0.75)
+}
+
+.footer-title{
+  font-size:40px;
+  font-family:$text-font-bold;
+  margin-top: 31px;
+  padding: 0;
+
+}
+.footer-thin{
+  margin-top: 32px;
+  padding: 0;
+}
+
+.financing{
+  letter-spacing: 2px;
+  font-size:25px;
+}
+
+.nap{
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.easy-steps{
+  font-size: 170px;
+  color: #fff;
+  font-family: $text-font;
+}
+
+.header-download{
+   text-transform: uppercase;
+   font-family: $text-font-black;
+   font-size: 38px;
+
+}
+
+// === ===
+
+
+// === ===
+
+.easy-steps-caption{
+  color: #fff;
+  font-size: 24px;
+  font-family: $text-font-thin !important;
+  margin-top: -45px;
+}
+
+.easy-steps-caption-bottom{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin: -1.0rem 0 1.0rem 0;
+  font-family: $text-font-bold !important;
+  letter-spacing: 3px;
+  margin-top: 60px;
+}
+
+
+
+.slider .slides {
+  background-color:#eeeeee;
+}
+
+.dark-yellow {
+  background-color:#f8b504;
+}
+
 .gray{
-    background-color:$text-color !important;
+    background-color:$text-color-gray !important;
 }
+.light-gray{
+  background-color: #a9a9a9;
+}
+
+
+.gradient{
+  //background: linear-gradient(left top, rgba(158,158,158,1), rgba(223,223,223,1));
+//background: linear-gradient(red, yellow);
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4efc0+0,abbd73+100;Olive+3D+%232 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9e9e9e+0,dfdfdf+100 */
+background: rgb(158,158,158); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(158,158,158,1) 0%, rgba(223,223,223,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(158,158,158,1) 0%,rgba(223,223,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(158,158,158,1) 0%,rgba(223,223,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e9e9e', endColorstr='#dfdfdf',GradientType=1 ); /* IE6-9 */
+}
+
 
 
 .highlight{
   color:$primary-color;
-  font-weight: 600;
   text-transform: uppercase;
+  font-family: $text-font-medium;
 }
 
 .uppercase{
   text-transform: uppercase;
 }
+
+
+
+
+//Fotter

@@ -1,26 +1,54 @@
-//Menu Colors
-$text-content: #1a1a1a;
-$topmenu-link: #1a1a1a;
-$topmenu-hover: #0a5f9f;
+//=== Layout Colors ===
+$primary-color:   #f8b504;      //yellow
+$secondary-color: #0a5f9f;      //blue
+$ternary-color:   #1a1a1a;      //gray
+
+//===  Menu Colors ===
+$text-content:   #1a1a1a;
+$topmenu-link:   #1a1a1a;
+$topmenu-hover:  #0a5f9f;
 $topmenu-active: #f8b504;
 
-//Gray
-$text-color: #1a1a1a;
-// $text-color-light:
-// $text-color-dark:
+//===  Text Colors ===
+$text-color-gray:   $ternary-color;
+$text-color-blue:   $secondary-color;
+$text-color-yellow: $primary-color;
+$text-color-dark-yellow: #c18610;
+$text-color-white: #000;
+$text-color-black: #fff;
 
-//Yellow
-//$primary-color: color("yellow", "accent-4") !default; ?
+//=== Link Colors ===
+$link-color: $primary-color;
 
-//$primary-color: color("steel-teal", "base") !default;
-$primary-color: #f8b504;
 
- //Blue
-$secondary-color: #0a5f9f;
-// $secondary-color-dark:
-// $secondary-color-light:
+//===  Font Styles ===
+$text-font:        'gotham-book', Verdana, Arial, Sans-serif;
+$text-font-black:  'gotham-black', Verdana, Arial, Sans-serif;
+$text-font-bold:   'gotham-bold', Verdana, Arial, Sans-serif;
+$text-font-light:  'gotham-light', Verdana, Arial, Sans-serif;
+$text-font-medium: 'gotham-medium', Verdana, Arial, Sans-serif;
+$text-font-thin:   'gotham-thin', Verdana, Arial, Sans-serif;
+$text-font-ultra:  'gotham-ultra', Verdana, Arial, Sans-serif;
+$text-font-x-light:'gotham-x-light', Verdana, Arial, Sans-serif;
 
- 
+//===  Sizes ===
+
+
+//=== Header
+$text-large: 70px;
+$text-medium:50px;
+$text-small: 24px;
+$text-tiny:10px;
+
+
+// $screen: "only screen";
+// $small: "only screen and (min-width: #{$small-screen})";
+// $medium: "only screen and (min-width: #{$medium-screen})";
+// $large: "only screen and (min-width: #{$large-screen})";
+// $landscape: "only screen and (orientation: landscape)";
+// $portrait: "only screen and (orientation: portrait)";
+
+
 // $primary-color: color("materialize-red", "lighten-2") !default;
 //   $primary-color-light: false !default;
 //   $primary-color-dark: false !default;

@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SpiRails</title>
+    <title>Spi Borescopes | Inspection Camera | Endoscope | Video Borescope</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--materialize icons-->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
     <%= yield %>
+    <!-- <script type="text/javascript">
+    $(document).ready(function(){
+        $('.slider').slider({indicators: false});
+        $(".button-collapse").sideNav();
+        $('.carousel.carousel-slider').carousel(
+          {
+            fullWidth: true
+          });
+    });
+    </script> -->
     <script type="text/javascript">
     $(document).ready(function(){
-        $('.parallax').parallax();
+        //arrow for the testimonial slider !
+        // $('i.fa-chevron-circle-left').click(function() {
+        //   $('.carousel').carousel('prev');
+        // });
+        //
+        // $('i.fa-chevron-circle-right').click(function() {
+        //    $('.carousel').carousel('next');
+        // });
+
+
+        $('.materialboxed').materialbox();
+        $('.slider').slider({indicators: false});
+        $(".button-collapse").sideNav();
         $('.carousel.carousel-slider').carousel(
           {
             fullWidth: true
           });
     });
     </script>
+
   </body>
 </html>
