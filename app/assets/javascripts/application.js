@@ -13,8 +13,7 @@
 //= require jquery
 //= require materialize-sprockets
 //= require jquery_ujs
-
+//= require material
 //= require materialize-sprockets
-
 //= require turbolinks
 //= require_tree .

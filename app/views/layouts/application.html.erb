@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Spi Borescopes | Inspection Camera | Endoscope | Video Borescope</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">-->
+    <link href="/assets/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--materialize icons-->
     <%= csrf_meta_tags %>
 
@@ -40,8 +43,12 @@
         $(".button-collapse").sideNav();
         $('.carousel.carousel-slider').carousel(
           {
-            fullWidth: true
+
+            indicators:false,
+            fullWidth:true
           });
+
+        $(".indicators").addClass("none");
     });
     </script>
 

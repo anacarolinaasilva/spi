@@ -43,6 +43,8 @@ gem 'materialize-sass'
 #Use bootstrap
 #gem 'bootstrap-sass',
 #ENDS ANY CHANGES BELOW
+gem 'material_design_lite-sass'
+gem 'material_design_icons'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

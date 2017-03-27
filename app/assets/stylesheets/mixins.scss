@@ -3,13 +3,9 @@
     color: $topmenu-link;
     &:hover {
       color: $topmenu-hover;
-      border-bottom: 0.075em inset #0a5f9f;
-      background: transparent;
     }
     &:active {
       color: $topmenu-active;
-      border-bottom: 0.075em inset #0a5f9f;
-      background: transparent;
     }
   }
 }
@@ -28,10 +24,13 @@
 
 
 @mixin phone-number($font-size:60px, $font-family: $text-font-black){
-  font-size:  $font-size;
+  font-size:   $font-size;
   font-family: $font-family;
 }
 
+@mixin logo($size){
+  width: $size;
+}
 
 
 //

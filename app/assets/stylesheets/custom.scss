@@ -1,34 +1,258 @@
+// ==========================================================================
+// CSS File organization
+// ==========================================================================
+
+// 1. Start SPI Products ===
+// 2.
+// 3.
+// 4.
+// 5.
+
 @include apply-to-ie-6{
   body{
     //any content here font-size:125%
   }
 }
 
-body {
+
+// Fix Incompability Material vs Materialize
+/* line 21, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
+html, body {
   font-family: $text-font;
   color: $text-color-gray;
+  line-height: 1.5;  //fix bug material and materialize typography incompabilities
 }
 
+
+//=== Layout Colors ===
+.bc-primary-color{
+  background-color: $primary-color;
+}
+.bc-secondary-color{
+     background-color: $secondary-color;
+}
+.bc-ternary-color{
+     background-color: $ternary-color;
+}
+.bc-fourth-color{
+     background-color: $fourth-color;
+}
+
+.bc-fifth-color{
+     background-color: $fifth-color;
+}
+
+
+.none{
+  display: none;
+}
+.margin-bottom {
+  margin-bottom: 0px;
+}
+
+.spi-call-to-action{
+  border-radius: 15px;
+  padding: 5px 25px;
+  font-family: $text-font;
+  height:45px;
+  letter-spacing: 2px;
+  font-size: 18px;
+
+}
+
+///* line 85, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
+p {
+ line-height: 1.5;
+}
+
+.clear-10 {
+  margin-bottom: 10px;
+}
+.clear-20{
+    margin-bottom: 20px;
+}
+.clear-30{
+    margin-bottom: 30px;
+}
+.clear-40{
+    margin-bottom: 40px;
+}
+.clear-50{
+    margin-bottom: 50px;
+}
+.clear-80{
+    margin-bottom: 80px;
+}
 a {
   color: $link-color;
 }
 
+//=== Start Button ===
+  .waves-effect.waves-blue .waves-ripple {
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+    background-color: rgba(10, 95, 159, 0.65);
+  }
+  a.btn-floating{
+    &:hover{
+      background-color: rgba(10, 95, 159, 0.65) !important;
+    }
+  }
+//=== End Button ===
+
+
+
+// === Start Hide and Show functions ===
+.hide-on-small-and-up{
+  @media #{$small-and-up}{
+      display:none;
+  }
+}
+// === End Hide and Show functions ===
+
+
+//=== HEADER  ===
 .mainLogo-wrap{
   display: block;
   float: left;
   position: relative;
+  @media only screen and (max-width: 768px)
+  {
+      float: none;
+  }
+
   img{
     display: block;
     max-width:none;
-    @media #{$small-and-down}{
-      max-width: 200px;
+    @media only screen
+    and (min-width: 360px)
+    and (max-width: 1100px)
+    {
+      max-height:40px;
+      width:auto;
     }
-  }
+    @media only screen and (max-width: 768px)
+    {
+      display: inline-block;
+      margin: 0 auto;
+      position: absolute;
+      left: 30%;
+
+      height:auto;
+      width:40%;
+
+      }
+
+      @media only screen
+      and (max-width: 360px){
+        display: none;
+      }
 }
+}
+
+
+.iconLogo-wrap{
+   display: none;
+   margin: 0  18px;
+   @media only screen
+   and (max-width: 360px){
+     float:left;
+     display:block;
+   }
+
+
+}
+
+
+.button-collapse-wrap{
+  float: left;
+}
+
+
+// === MODIFICACAO NO LAYOUT  ===
+a.button-collapse {
+       height: 40px !important;
+}
+
+// i.material-icons {
+//     line-height: 40px !important;
+// }
+.row .no-margin{
+  padding-bottom:10px;
+}
+
+
+// === MODIFICACAO NO LAYOUT  ===
+
+#section2{
+  background-color: #eeeeee;
+}
+
+#header-wrap{
+    background-color: #eeeeee;
+}
+
+
+
+
+.phoneNumber-wrap{
+  display: none;
+  float: right;
+  position: relative;
+  margin: 0  18px;
+  a{
+    display: block;
+  }
+  @media only screen and (max-width: 768px) {
+      display: block;
+  }
+
+  @media only screen
+  and (max-width: 360px){
+    float:left;
+  }
+
+
+}
+
+
 
 .phone-number {
   color: $primary-color;
+  font-size: $text-large;
+  font-family: $text-font-medium;
 
+  @media only screen and (max-width: 768px){
+       display: none;
+  }
+
+  @media only screen
+  and (min-width: 768px)
+  and (max-width: 1100px){
+      @include phone-number($text-medium, $text-font-medium)
+  }
+
+}
+
+
+
+.spi-fab {
+    position: absolute;
+    right: 80%;
+    bottom: 0%;
+    z-index: 3;
+    background: $primary-color !important;
+    color: $secondary-color !important;
+  }
+
+  #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
 }
 
 .first-img {
@@ -38,15 +262,12 @@ a {
 }
 
 span.header-wrap{
-
     margin-bottom: 5px  !important;
     margin: 0 auto !important;
     display: inline-block;
 }
 
-.slide-height{
-  height:500px !important;
-}
+
 
 h2.header-1 {
     text-transform: uppercase;
@@ -66,163 +287,297 @@ h3.header-2 {
   border-bottom: 2px solid $text-color-yellow;
 }
 
-h2.header-white-black{
-  text-transform: uppercase;
-  font-size: 32px;
-  font-family: $text-font-bold;
-  color: #fff;
-}
-
-.easy-steps p{
-  font-size: 70px;
-}
-
-  @media #{$small-and-down} {
-     .phone-number {
-      @include phone-number($text-tiny, $text-font-thin)
-     }
-  }
-  @media #{$medium-and-up} {
-    .phone-number {
-     @include phone-number($text-small, $text-font-medium)
-   }
-  }
-  @media #{$medium-and-down} {
-    .phone-number {
-        @include phone-number($text-medium, $text-font-medium)
-    }
-  }
-  @media #{$large-and-up} {
-   .phone-number {
-       @include phone-number(60px, $text-font-medium)
-   }
-  }
 
 
-  // @include medium-screens{
-  //     font-medium: $text-medium;
-  //     font-family: $text-font-bold;
-  // }
-  // @include small-screens{
-  //     font-medium: $text-small;
-  //     font-family: $text-font-bold;
-  // }
-  // @include tiny-screens{
-  //     font-medium: $text-tiny;
-  //     font-family: $text-font-medium;
-  // }
 
-// @media #{$small-and-down} {
-//     // styles for small screens and down
-//   }
-// @media #{$medium-and-up} {
-//     // styles for medium screens and larger
-//   }
-// @media #{$medium-and-down} {
-//     // styles for medium screens and down
-//   }
-// @media #{$large-and-up} {
-//     // styles for large screens and up
-//   }
+
+
 
 //MENU
+
+
+nav ul li a:active{
+  border-bottom: 1px solid #000;
+}
+
 #topLevel-menu {
   position: relative;
-  height: auto;
-  line-height: normal;
-  //display: inline-block;
-  //float: left;
-  //text-align: center;
   box-shadow: none;
+  background-color: $fourth-color;
+    ul{
+       background-color:#eeeeee;
+       margin-top:30px;
+    }
 }
+
 
 #topLevel-menu ul li{
     float: none;
-    margin: 0 -3px;
-    line-height: normal;
-    color: #202221;
+    //line-height: normal;
 }
 
 #topLevel-menu ul, #topLevel-menu ul li{
-  //white-space: nowrap;
-  //display: inline-block;
-  //width: auto;
-  @include linx($text-color-gray, $primary-color, $secondary-color);
+   @include linx($topmenu-link, $secondary-color, $primary-color);
+   //@mixin linx ($topmenu-link, $topmenu-hover, $topmenu-active) {
 }
 
 #topLevel-menu ul li a{
-  padding: 6px 8px;
-  border-bottom: 1px solid transparentize(#fefefe, 1);
+  //border-bottom: 1px solid transparentize(#1e1e1e, 1);
   transition: border-bottom 0.5s;
-  &:hover {
-  border-bottom: 1px solid opacify(#fefefe, .5);
+  // &:hover {
+  // border-bottom: 1px solid opacify(#fefefe, .5);
+  // }
+}
+
+
+//MENU
+.top-menu{
+  font-family: $text-font-bold;
+}
+
+.tabs .tab a
+{
+    font-size:20px;
+}
+
+.btn-menu{
+  background-color:$text-color-blue;
+  i{
+      color: $text-color-yellow;
   }
 }
 
-.side-nav{
-  text-align: center;
-}
-
-i.icon-yellow{
-  color:$primary-color;
-}
-
-.button-collapse-wrap{
-  float: left;
-  height: 56px;
-  margin: -16px 0 -16px -10px;
-  padding: 16px 0 16px 10px;
-  overflow: hidden;
-}
 
 
-.caption-slider-top{
-  position:absolute;
-  top:35px;
-  left: -100px;
-}
+
 
 .text-color-yellow{
   color: $text-color-yellow;
 }
 
-.caption-slider-top h1.header-slider{
-   font-size: 45px;
-   text-transform: uppercase;
-   font-weight: 800;
-   font-family: $text-font-black;
-   color: $text-color-yellow;
-   letter-spacing: -1px;
 
+
+// === Start Slide ==
+.btn-slide{
+   position: absolute;
+   margin-left: 10px;
+   background-color: $primary-color;
+ }
+
+#spi-caption{
+   left:0%;
+}
+
+.download-catalog{
+   color:       $ternary-color;
+   font-family: $text-font-thin;
+   &:hover {
+     color: $secondary-color;
+   }
+}
+
+.caption-slider-top{
+  position:absolute;
+  top:35px;
+  @media #{$small-and-down}{
+    text-shadow: rgb(248, 181, 4) 2px 1px 3px;
+  }
 }
 
 .caption-slider-bottom {
-  position:absolute;
-  top:150px;
-  left: -100px;
+    margin-top:-17px;
+
+    @media #{$xsmall-and-down} {
+      font-size: 20px;
+    }
+    @media #{$small-only} {
+      font-size: 30px;
+    }
+    @media  #{$medium-only} {
+      font-size: 35px;
+    }
+    @media #{$large-only}{
+
+    }
+
+    p{
+      font-family: $text-font-thin;
+      color: $text-color-gray !important;
+      font-size: 24px;
+
+    }
+
+
 
 }
 
-.caption-slider-bottom p{
-  font-family: $text-font-thin;
-  color: $text-color-gray !important;
-  font-size: 24px;
+
+.caption-slider-top h1.header-slider{
+   font-size: 2.6vw;
+   font-size: 50px; /** Older Browsers **/
+   text-transform: uppercase;
+   font-weight: 800;
+   font-family: $text-font-black;
+   color: $fifth-color ;
+   letter-spacing: -1px;
+     @media #{$xsmall-and-down} {
+       font-size: 20px;
+     }
+     @media #{$small-only} {
+       font-size: 30px;
+     }
+     @media  #{$medium-only} {
+       font-size: 35px;
+     }
+     @media #{$large-only}{
+       font-size: 40px;
+     }
+     @media #{$xlarge-and-up}{
+          font-size: 45px;
+     }
 }
+
+
+
+
+// === End Slide ==
+
+
+.spi-card{
+  img{
+    max-width: 200px;
+    height: 300px;
+    margin: 0 auto;
+
+  }
+}
+
+.spi-card-large{
+  img {
+    max-width: 400px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* label color */
+ .input-field label {
+   color: $secondary-color !important;
+ }
+ .input-field input{
+   border-radius: 15px !important;
+   background-color: #fff;
+   padding-left: 10px;
+ }
+
+// type: text
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+     color: $secondary-color;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid $secondary-color;
+   box-shadow: 0 1px 0 0 #000;
+ }
+
+// type: email
+.input-field input[type=email]:focus + label {
+    color: $secondary-color;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid $secondary-color;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+ // /* valid color */
+ // .input-field input[type=text].valid {
+ //   border-bottom: 1px solid $secondary-color;
+ //   box-shadow: 0 1px 0 0 #000;
+ // }
+ // /* invalid color */
+ // .input-field input[type=text].invalid {
+ //   border-bottom: 1px solid $secondary-color;
+ //   box-shadow: 0 1px 0 0 #000;
+ // }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: $secondary-color;
+ }
+
+
+
+// === Start SPI Products ===
+.card-hover{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+}
+
+.card-hover:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+ }
+
+.spi-card-icon{
+      border-top: 0px !important;
+      padding: 0px 24px 50px 0px !important ;
+  a{
+    position: absolute;
+    left: 40%;
+    background-color: $secondary-color;
+  }
+}
+
+.card .spi{
+    padding-bottom: 0px !important;
+    padding-top: 5px;
+}
+
+// === Start SPI Products ===
+
+
 
 .catalog-call-action{
    margin: 0 auto;
 
 }
 
+.spi-title{
+  font-family: $text-font-thin;
+  font-size: 21px !important;
+  text-align: center;
+}
 
+
+// === Testimonial
 .carousel-item .testimonial{
-  font-size: 44px !important;
+  font-size: 40px !important;
   font-family: $text-font-thin;
   font-style: italic;
+  line-height: 1;
   .bold {
     font-family: $text-font-bold;
   }
 }
+
+.carousel i{
+  color:#fff;
+}
+.arrow-left{
+  float: left;
+}
+
+.arrow-right{
+ float:right;
+}
+
+.carousel-slider{
+  height: 210px !important;
+}
+//======
 
 .carousel-item  .quote{
   font-size: 200px;
@@ -234,6 +589,11 @@ i.icon-yellow{
 .blue{
   background-color:$secondary-color;
 }
+
+#section4{
+    background-color:$secondary-color;
+}
+
 .font-blue{
   color:$text-color-blue;
 }
@@ -243,13 +603,12 @@ i.icon-yellow{
 .font-thin{
   font-family: $text-font-thin;
 }
+
+
+
+
+
 //=== Headers Font Style ===
-.header-white{
-  color:#fff;
-  text-transform: uppercase;
-  font-size: 18px;
-  margin: -1.0rem 0 1.0rem 0;
-}
 
 .header-dark-yellow{
   color: #c18610;
@@ -266,6 +625,16 @@ i.icon-yellow{
   padding: 0;
 
 }
+
+.header-product-catalog{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    font-family: $text-font-bold;
+    color: $text-color-gray !important;
+    padding: 3px;
+}
+
 .footer-thin{
   margin-top: 32px;
   padding: 0;
@@ -282,40 +651,6 @@ i.icon-yellow{
   font-style: normal;
 }
 
-.easy-steps{
-  font-size: 170px;
-  color: #fff;
-  font-family: $text-font;
-}
-
-.header-download{
-   text-transform: uppercase;
-   font-family: $text-font-black;
-   font-size: 38px;
-
-}
-
-// === ===
-
-
-// === ===
-
-.easy-steps-caption{
-  color: #fff;
-  font-size: 24px;
-  font-family: $text-font-thin !important;
-  margin-top: -45px;
-}
-
-.easy-steps-caption-bottom{
-  color:#fff;
-  text-transform: uppercase;
-  font-size: 60px;
-  margin: -1.0rem 0 1.0rem 0;
-  font-family: $text-font-bold !important;
-  letter-spacing: 3px;
-  margin-top: 60px;
-}
 
 
 
@@ -336,19 +671,92 @@ i.icon-yellow{
 
 
 .gradient{
-  //background: linear-gradient(left top, rgba(158,158,158,1), rgba(223,223,223,1));
-//background: linear-gradient(red, yellow);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c2c2c2+0,dbdbdb+100&1+0,0+100 */
+  background: -moz-linear-gradient(left,  rgba(194,194,194,1) 0%, rgba(219,219,219,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(194,194,194,1) 0%,rgba(219,219,219,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(194,194,194,1) 0%,rgba(219,219,219,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2c2c2', endColorstr='#00dbdbdb',GradientType=1 ); /* IE6-9 */
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e4efc0+0,abbd73+100;Olive+3D+%232 */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9e9e9e+0,dfdfdf+100 */
-background: rgb(158,158,158); /* Old browsers */
-background: -moz-linear-gradient(left, rgba(158,158,158,1) 0%, rgba(223,223,223,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(158,158,158,1) 0%,rgba(223,223,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(158,158,158,1) 0%,rgba(223,223,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e9e9e', endColorstr='#dfdfdf',GradientType=1 ); /* IE6-9 */
+}
+
+// === Start Free Demo Program ===
+
+.header-demo-program{
+  text-transform: uppercase;
+  font-size: 45px;
+  font-family: $text-font-bold;
+  color: #fff;
+  margin-top: 2.52rem;
+}
+
+ .sub-header-demo-program{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: -1.0rem 0 1.0rem 0;
+  font-family: $text-font-thin;
+}
+
+.easy-steps p{
+  font-size: 70px;
+}
+
+.easy-steps{
+  font-size: 170px;
+  color: #fff;
+  font-family: $text-font-thin;
+}
+
+.easy-steps-caption{
+  color: #fff;
+  font-size: 24px;
+  font-family: $text-font-thin !important;
+  margin-top: -45px;
+}
+
+.easy-steps-caption-bottom{
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin: 0.625rem 0 -0.63rem 0;
+  font-family: $text-font-bold !important;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.phone-header{
+  background: #2d76ad;
+}
+
+.call-to-action-demo-program{
+  border-radius: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 5px 25px;
+  font-family: $text-font;
+  height:45px;
+}
+
+.or-demo-program{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-family: $text-font-thin;
+    margin-bottom: 0px;
 }
 
 
+.section-call-demo-program{
+  background: $sixth-color;
+}
+// === End Free Demo Program ===
+
+.header-download{
+   text-transform: uppercase;
+   font-family: $text-font-black;
+   font-size: 45px;
+   text-align: center;
+}
 
 .highlight{
   color:$primary-color;
@@ -359,8 +767,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e9e9e', end
 .uppercase{
   text-transform: uppercase;
 }
-
-
-
-
-//Fotter
