@@ -2,27 +2,18 @@
 // CSS File organization
 // ==========================================================================
 
-// 1. Start SPI Products ===
-// 2.
-// 3.
-// 4.
-// 5.
 
-@include apply-to-ie-6{
-  body{
-    //any content here font-size:125%
-  }
-}
-
-
-// Fix Incompability Material vs Materialize
+// === Fix Incompability Material vs Materialize
 /* line 21, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
 html, body {
   font-family: $text-font;
   color: $text-color-gray;
-  line-height: 1.5;  //fix bug material and materialize typography incompabilities
+  line-height: 1.5;  //fix bug material & materialize typography incompabilities
 }
-
+///* line 85, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
+p {
+ line-height: 1.5;
+}
 
 //=== Layout Colors ===
 .bc-primary-color{
@@ -42,29 +33,14 @@ html, body {
      background-color: $fifth-color;
 }
 
-
-.none{
-  display: none;
+// === Layout Margin
+.row .no-margin{
+  padding-bottom:10px;
 }
+
 .margin-bottom {
   margin-bottom: 0px;
 }
-
-.spi-call-to-action{
-  border-radius: 15px;
-  padding: 5px 25px;
-  font-family: $text-font;
-  height:45px;
-  letter-spacing: 2px;
-  font-size: 18px;
-
-}
-
-///* line 85, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
-p {
- line-height: 1.5;
-}
-
 .clear-10 {
   margin-bottom: 10px;
 }
@@ -83,11 +59,13 @@ p {
 .clear-80{
     margin-bottom: 80px;
 }
+
+// === layout Links
 a {
   color: $link-color;
 }
 
-//=== Start Button ===
+// === Button ===
   .waves-effect.waves-blue .waves-ripple {
    /* The alpha value allows the text and background color
    of the button to still show through. */
@@ -98,20 +76,20 @@ a {
       background-color: rgba(10, 95, 159, 0.65) !important;
     }
   }
-//=== End Button ===
 
-
-
-// === Start Hide and Show functions ===
-.hide-on-small-and-up{
-  @media #{$small-and-up}{
-      display:none;
+  // === Start Hide/Show Devices ===
+  .hide-on-small-and-up{
+    @media #{$small-and-up}{
+        display:none;
+    }
   }
-}
-// === End Hide and Show functions ===
 
 
-//=== HEADER  ===
+// === SPI Borescopes Customization Starts Here ===
+
+
+
+// === Start Header ===
 .mainLogo-wrap{
   display: block;
   float: left;
@@ -124,6 +102,7 @@ a {
   img{
     display: block;
     max-width:none;
+
     @media only screen
     and (min-width: 360px)
     and (max-width: 1100px)
@@ -131,23 +110,23 @@ a {
       max-height:40px;
       width:auto;
     }
+
+
     @media only screen and (max-width: 768px)
     {
-      display: inline-block;
-      margin: 0 auto;
-      position: absolute;
-      left: 30%;
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        left: 30%;
+        height:auto;
+        width:40%;
+        }
+        @media only screen
+        and (max-width: 360px){
+          display: none;
+        }
+    }
 
-      height:auto;
-      width:40%;
-
-      }
-
-      @media only screen
-      and (max-width: 360px){
-        display: none;
-      }
-}
 }
 
 
@@ -159,8 +138,6 @@ a {
      float:left;
      display:block;
    }
-
-
 }
 
 
@@ -168,32 +145,22 @@ a {
   float: left;
 }
 
-
-// === MODIFICACAO NO LAYOUT  ===
 a.button-collapse {
        height: 40px !important;
 }
 
-// i.material-icons {
-//     line-height: 40px !important;
-// }
-.row .no-margin{
-  padding-bottom:10px;
-}
-
-
-// === MODIFICACAO NO LAYOUT  ===
-
-#section2{
-  background-color: #eeeeee;
+.spi-call-to-action{
+  border-radius: 15px;
+  padding: 5px 25px;
+  font-family: $text-font;
+  height:45px;
+  letter-spacing: 2px;
+  font-size: 18px;
 }
 
 #header-wrap{
     background-color: #eeeeee;
 }
-
-
-
 
 .phoneNumber-wrap{
   display: none;
@@ -211,8 +178,6 @@ a.button-collapse {
   and (max-width: 360px){
     float:left;
   }
-
-
 }
 
 
@@ -286,15 +251,14 @@ h3.header-2 {
   color: $text-color-gray !important;
   border-bottom: 2px solid $text-color-yellow;
 }
+//=== End Header
 
 
 
 
 
 
-
-//MENU
-
+// === Start Menu ===
 
 nav ul li a:active{
   border-bottom: 1px solid #000;
@@ -330,7 +294,6 @@ nav ul li a:active{
 }
 
 
-//MENU
 .top-menu{
   font-family: $text-font-bold;
 }
@@ -347,17 +310,18 @@ nav ul li a:active{
   }
 }
 
-
-
-
-
 .text-color-yellow{
   color: $text-color-yellow;
 }
 
+// === End Menu ===
+
+// === Start Slider ===
+#section2{
+  background-color: #eeeeee;
+}
 
 
-// === Start Slide ==
 .btn-slide{
    position: absolute;
    margin-left: 10px;
@@ -436,10 +400,6 @@ nav ul li a:active{
           font-size: 45px;
      }
 }
-
-
-
-
 // === End Slide ==
 
 
@@ -561,6 +521,7 @@ nav ul li a:active{
   .bold {
     font-family: $text-font-bold;
   }
+
 }
 
 .carousel i{

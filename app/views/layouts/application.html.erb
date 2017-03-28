@@ -6,6 +6,8 @@
     <!--<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">-->
     <link href="/assets/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--materialize icons-->
+
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -43,12 +45,17 @@
         $(".button-collapse").sideNav();
         $('.carousel.carousel-slider').carousel(
           {
-
-            indicators:false,
             fullWidth:true
-          });
 
-        $(".indicators").addClass("none");
+          });
+          //autoplay()
+          function autoplay() {
+              setTimeout(autoplay, 9500);
+              $('.carousel').carousel('next');
+          }
+
+
+
     });
     </script>
 

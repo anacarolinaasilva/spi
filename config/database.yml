@@ -6,6 +6,7 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
   timeout: 5000
 
@@ -35,3 +36,5 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
