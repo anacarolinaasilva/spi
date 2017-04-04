@@ -14,6 +14,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  #You can tell Rails not to bootstrap your application during asset compilation
+  config.assets.initialize_on_precompile = false
+
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
@@ -86,7 +89,7 @@ Rails.application.configure do
 
 
   #Action_Mailer
-  config.action_mailer.default_url_options = { :host => 'secure-forest-10004.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'pure-fortress-36651.herokuapp.com' }
 
   #Sending emails using ActionMailer and Gmail
   config.action_mailer.delivery_method = :smtp
