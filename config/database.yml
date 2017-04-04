@@ -12,9 +12,9 @@ default: &default
 
 development:
   <<: *default
-  #database: db/development.sqlite3
-  encoding: unicode
   database: myapp_development
+  encoding: unicode
+
   pool: 5
   username: rails_dev
   password: root_20ki
@@ -23,6 +23,8 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+# DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#
 test:
   <<: *default
   #database: db/test.sqlite3
@@ -35,6 +37,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
-  username: myapp
+  database: dbrd7rvedqdojv
+  username: qjfajfouogbslk
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  url: <%= DATABASE_URL %>
+  port: 5432
