@@ -40,12 +40,14 @@ gem 'rails_12factor', group: :production
 gem 'sass-rails', '~>5.0'
 #Use Materialize
 gem 'materialize-sass'
+#gem 'materialize-rails', '~> 0.97.5.2' #new
 #Use bootstrap
 #gem 'bootstrap-sass',
 #ENDS ANY CHANGES BELOW
-gem 'material_design_lite-sass'
+#gem 'material_design_lite-sass'
 gem 'material_design_icons'
-gem 'font-awesome-sass-rails'
+gem 'font-awesome-sass'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

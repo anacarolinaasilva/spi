@@ -6,7 +6,7 @@
         <div class="slider background-effect">
          <ul class="slides">
            <li>
-             <img class="first-img" src="https://content.screencast.com/users/carolokausp/folders/Jing/media/45593e7d-5dd4-40be-83df-2d3eddf8e1d0/00000023.png"> <!-- random image -->
+             <%= image_tag('slider-1.png', :alt => 'TO BE ADDED', :class => 'first-img') %>
              <div class="caption left" id="spi-caption" >
                 <div class="caption-slider-top">
                    <h1 class="header-slider">Technology you <span class="font-blue">need</span><br>at a <span class="font-blue">price</span> you can afford.</h1>
@@ -15,7 +15,7 @@
                       <p><a href="#"  target="_blank" class="download-catalog" >Download our Pricing & Product Catalog</a><a class="btn-floating waves-effect waves-blue btn-slide" ><i class="material-icons">keyboard_arrow_right</i></a></p>
                    </div>
 
-                   <div class="btn bc-primary-color spi-call-to-action waves-effect waves-ligh hide-on-med-and-up">
+                   <div class="btn bc-primary-color spi-call-to-action waves-effect  waves-light hide-on-med-and-up">
                      <span>Download Catalog</span>
                  </div>
 
@@ -30,7 +30,7 @@
 </div>
 
 
-
+<!-- Section 3 starts Here -->
 <div id="section3">
  <div class="container">
    <div class="row  clear-50">
@@ -40,15 +40,15 @@
 
        <div class="col s12 m3 l3">
              <div class="card z-depth-0 card-hover" >
-               <div class="card-image waves-effect waves-block waves-light  spi-card   ">
-                 <img class="activator" src="https://content.screencast.com/users/carolokausp/folders/Jing/media/b6e595b9-73a9-4a86-a376-2dcb9cec09be/00000016.png">
+               <div class="card-image waves-effect waves-block  waves-lightt  spi-card   ">
+                 <%= image_tag('x1-series-spi-borescopes.png', :alt => 'TO BE ADDED', :class => 'activator') %>
                </div>
                <div class="card-content spi">
                  <h3 class="header-product-catalog">X1 Series</h3>
                        <span class="card-title activator grey-text text-darken-4 spi-title">Articulating Borescope</span>
                </div>
                <div class="card-action spi-card-icon">
-                  <a class="btn-floating waves-effect waves-light catalog-call-action" ><i class="material-icons  icon-yellow">keyboard_arrow_right</i></a>
+                  <a class="btn-floating waves-effect  waves-lightt catalog-call-action" ><i class="material-icons">keyboard_arrow_right</i></a>
                </div>
                <div class="card-reveal">
                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -59,15 +59,15 @@
 
        <div class="col s12 m3 l3">
              <div class="card z-depth-0 card-hover  " >
-               <div class="card-image waves-effect waves-block waves-light  spi-card">
-                 <img class="activator" src="https://content.screencast.com/users/carolokausp/folders/Jing/media/98abcbc7-d22c-4df5-b797-23fcc77192d4/00000017.png">
+               <div class="card-image waves-effect waves-block  waves-lightt  spi-card">
+                   <%= image_tag('mc1-series-spi-borescopes.png', :alt => 'TO BE ADDED', :class => 'activator') %>
                </div>
                <div class="card-content spi">
-                 <h3 class="header-product-catalog">X1 Series</h3>
-                       <span class="card-title activator grey-text text-darken-4 spi-title">Articulating Borescope</span>
+                 <h3 class="header-product-catalog">MC1 Series</h3>
+                       <span class="card-title activator grey-text text-darken-4 spi-title">Mechanical Articulation</span>
                </div>
                <div class="card-action spi-card-icon">
-                  <a class="btn-floating waves-effect waves-light catalog-call-action" ><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="btn-floating waves-effect  waves-lightt catalog-call-action" ><i class="material-icons">keyboard_arrow_right</i></a>
                </div>
                <div class="card-reveal">
                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -76,16 +76,16 @@
             </div>
        </div>
         <div class="col s12 m6 l6">
-             <div class="card z-depth-0 card-hover  " >
-               <div class="card-image waves-effect waves-block waves-light  spi-card-large">
-                 <%=image_tag( root_url + "images/jcm-3000-series.jpg", size: "91x60" ,  alt: "Example Image", class:"activator")%>
+             <div class="card z-depth-0 card-hover" >
+               <div class="card-image waves-effect waves-block  waves-lightt  spi-card-large">
+                 <%= image_tag('jcm-300-series-spi-borescopes.png', :alt => 'TO BE ADDED', :class => 'activator') %>
                </div>
                <div class="card-content spi">
                  <h3 class="header-product-catalog">JCM Series</h3>
                        <span class="card-title activator grey-text text-darken-4 spi-title">Pipe Inspection System</span>
                </div>
                <div class="card-action spi-card-icon">
-                  <a class="btn-floating waves-effect waves-light catalog-call-action" ><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="btn-floating waves-effect  waves-lightt catalog-call-action" ><i class="material-icons">keyboard_arrow_right</i></a>
                </div>
                <div class="card-reveal">
                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
@@ -107,19 +107,19 @@
           </div>
         </div>
 
-          <div class="row  clear-80">
-            <div class="col s12 m4 l4" style="text-align:center;">
-                     <span class="easy-steps" >1</span><%=image_tag( root_url + "images/pic3.png", size: "91x60" ,  alt: "Example Image")%>
-                     <p class="easy-steps-caption">Contact Us</p>
+          <div class="row  clear-80 center">
+            <div class="col s12 m4 l4">
+                     <span class="easy-steps" >1</span><%= image_tag('pic3.png', :size => "91x60",:alt => 'TO BE ADDED') %>
+                     <p class="easy-steps-caption contact-us">Contact Us</p>
 
             </div>
-            <div class="col s12 m4 l4" style="text-align:center;">
-                     <span class="easy-steps" >2</span><%=image_tag( root_url + "images/pic2.png", size: "91x60" ,  alt: "Example Image")%>
-                     <p class="easy-steps-caption">Pick date & Location</p>
+            <div class="col s12 m4 l4" >
+                     <span class="easy-steps" >2</span><%= image_tag('pic2.png', :size => "91x60",:alt => 'TO BE ADDED') %>
+                     <p class="easy-steps-caption pick-date">Pick date & Location</p>
             </div>
-            <div class="col s12 m4 l4" style="text-align:center;">
-                     <span class="easy-steps" >3</span><%=image_tag( root_url + "images/pic1.png", size: "91x60" ,  alt: "Example Image")%>
-                     <p class="easy-steps-caption">We Deliver Demo</p>
+            <div class="col s12 m4 l4" >
+                     <span class="easy-steps" >3</span><%= image_tag('pic1.png', :size => "91x60",:alt => 'TO BE ADDED') %>
+                     <p class="easy-steps-caption we-deliver">We Deliver Demo</p>
             </div>
           </div>
       </div>
@@ -131,15 +131,15 @@
                  <p class="or-demo-program">OR</p>
                    <form class="col s12">
                         <div class="input-field col s12 m3 l3 offset-m2 offset-l2">
-                          <input id="first_name" placeholder="First Name" type="text" class="validate">
-                          <label for="first_name">Name</label>
+                          <input id="first_name" placeholder="Name" type="text" class="validate">
+                          <!-- <label for="first_name">Name</label> -->
                          </div>
                          <div class="input-field col s12 m3 l3">
                            <input id="email" type="email" placeholder="Email" class="validate">
-                           <label for="email">Email</label>
+                           <!-- <label for="email">Email</label> -->
                          </div>
                          <div class="input-field col s12 m3 l3">
-                             <div class="btn bc-primary-color call-to-action-demo-program waves-effect waves-ligh">
+                             <div class="btn bc-primary-color call-to-action-demo-program waves-effect  waves-light">
                              <span>Request Demo</span>
                              </div>
                          </div>
@@ -152,20 +152,20 @@
 
 
 <!-- Section 5 starts Here -->
-<div id="section5" class="">
+<div id="section5" >
    <div class="container">
-        <div class="row">
-          <div class="col s12 m12 l12" style="text-align: center;">
-            <span class="header-wrap"><h2 class="header-1">The Best Use SPI</h2></span>
-            <div class="partners-wrap" style="width:100%;position:relative;">
-                <img style="width:100%;" src="https://content.screencast.com/users/carolokausp/folders/Jing/media/ff865e17-0674-49ec-953c-a99584737b1d/00000011.png">
+        <div class="row center">
+          <div class="col s12 m12 l12 top-20">
+            <span class="header-wrap clear-160"><h2 class="header-1">The Best Use SPI</h2></span>
+            <div class="partners-wrap" >
+                <%= image_tag('spi-borescopes-partners.png', :alt => 'TO BE ADDED', :class => 'partners') %>
             </div>
           </div>
           </div>
     </div>
 </div>
 
-<!-- Section 5 starts Here  TESTIMONIALS !!! -->
+<!-- Section 5 starts here-->
 <div id="section6" class="dark-yellow">
    <div class="container">
         <div class="row" style="margin-bottom:0px;">
@@ -175,21 +175,21 @@
                <div class="carousel carousel-slider center"  data-indicators="true">
                    <div class="carousel-fixed-item center">
                    </div>
-                      <!-- <a data-slide="prev" class="waves-effect waves-light arrow-left next carousel-control left" data-slide="next"><i class="material-icons  medium ">keyboard_arrow_left</i></a>
-                      <a data-slide="next" class="waves-effect waves-light arrow-right prev carousel-control right" data-slide="prev"><i class="material-icons  medium ">keyboard_arrow_right</i></a> -->
+                      <!-- <a data-slide="prev" class="waves-effect  waves-lightt arrow-left next carousel-control left" data-slide="next"><i class="material-icons  medium ">keyboard_arrow_left</i></a>
+                      <a data-slide="next" class="waves-effect  waves-lightt arrow-right prev carousel-control right" data-slide="prev"><i class="material-icons  medium ">keyboard_arrow_right</i></a> -->
 
                      <div class="carousel-item  white-text" href="#one!">
-                       <div class="quotes-testimonial" style="float:left;" ><%=image_tag( root_url + "images/quotes.png", size: "91x85" ,  alt: "Example Image", class:"activator")%></div>
+                       <div class="quotes-testimonial" style="float:left;" ><%= image_tag('quotes.png', :size => "91x85",:alt => 'TO BE ADDED') %></div>
                          <p class="white-text testimonial">
                            We needed a borescope with the <span class="bold">excellent resolution. The DG1 worked perfectly!</span><br>-Energy servcies provider
                          </p>
                         </div>
                        <div class="carousel-item white-text" href="#two!">
-                          <div class="quotes-testimonial" style="float:left;" ><%=image_tag( root_url + "images/quotes.png", size: "91x85" ,  alt: "Example Image", class:"activator")%></div>
+                          <div class="quotes-testimonial" style="float:left;" ><%= image_tag('quotes.png', :size => "91x85",:alt => 'TO BE ADDED') %></div>
                        <p class="white-text testimonial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br>-text ever since the 1500s</p>
                    </div>
                    <div class="carousel-item white-text" href="#three!">
-                     <div class="quotes-testimonial" style="float:left;" ><%=image_tag( root_url + "images/quotes.png", size: "91x85" ,  alt: "Example Image", class:"activator")%></div>
+                     <div class="quotes-testimonial" style="float:left;" ><%= image_tag('quotes.png', :size => "91x85",:alt => 'TO BE ADDED') %></div>
                      <p class="white-text testimonial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <br>-text ever since the 1500s</p>
                   </div>
                 </div>
@@ -212,49 +212,35 @@
 <div class="divider"></div>
 
 
-<!-- Section 5 starts Here -->
-<div id="section7" class="">
+<!-- Section 7 starts Here -->
+<div id="section7">
   <div class="container ">
-       <div class="row gradient margin-bottom " >
-           <div class="col s12 m12 l12" style="padding: 0px 0px;text-align: center;" >
+       <div class="row center margin-bottom-zero" >
+           <div class="col s12 m12 l12 catalog-wrap" >
+                <span class="header-wrap"><h2 class="header-1">Pricing and Product Catalog</h2></span>
+                <figure class="fixedratio"></figure>
+           </div>
+      </div>
 
-           <span class="header-wrap"><h2 class="header-1">Pricing and Product Catalog</h2></span>
-
-            <div class="catalog-wrap" style="width:100%;position:relative;">
-                <img  style="width:100%;" src="https://content.screencast.com/users/carolokausp/folders/Jing/media/6c05ec47-9029-4f42-bc9c-b3628edefd60/00000027.png">
-                <h3 class="header-download">Download Our <span class="font-blue">Product</span><br> and <span class="font-blue">Pricing</span> catalog</h3>
-            </div>
-            <form class="col s12">
-
-            <div class="row" >
-                     <div class="input-field col s12 m3 l3 offset-m3 offset-l3">
-                     <input id="first_name" type="text" class="validate">
-                     <label for="first_name">Name</label>
-                    </div>
-                     <div class="input-field col s12 m3 l3">
-                      <input id="email" type="email" class="validate">
-                      <label for="email">Email</label>
-                    </div>
-                      <div class="input-field col s12 m3 l3">
-                      <div class="btn bc-primary-color spi-call-to-action waves-effect waves-ligh">
-                        <span>Download Now</span>
+       <div class="row margin-bottom gradient" >
+             <div class="col s12 m12 l12"  >
+                 <h3 class="header-download">Download Our <span class="font-blue">Product</span><br> and <span class="font-blue">Pricing</span> catalog</h3>
+                       <form class="col s12">
+                       <div class="row" >
+                                <div class="input-field col s12 m3 l3 offset-m3 offset-l3">
+                                <input id="first_name" placeholder="Name" type="text" class="validate">
+                               </div>
+                                <div class="input-field col s12 m3 l3">
+                                 <input id="email" placeholder="Email" type="email" class="validate">
+                               </div>
+                                 <div class="input-field col s12 m3 l3">
+                                 <div class="btn bc-primary-color spi-call-to-action waves-effect  waves-light">
+                                   <span>Download Now</span>
+                                   </div>
+                               </div>
                         </div>
-                    </div>
-             </div>
-           </form>
-         </div>
+                      </form>
+              </div>
         </div>
  </div>
-
 </div>
-
-
-<!--
-<a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/android-dot-com/" target="_blank" id="view-source"
- class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast"
- data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons icon-yellow">file_download</i> Download Catalog
- <span class="mdl-button__ripple-container">
-   <span class="mdl-ripple is-animating" style="width: 255.952px; height: 255.952px; transform: translate(-50%, -50%) translate(46px, 27px);">
-   </span>
- </span>
-</a> -->

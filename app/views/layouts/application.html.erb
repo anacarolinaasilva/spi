@@ -4,15 +4,17 @@
     <title>Spi Borescopes | Inspection Camera | Endoscope | Video Borescope</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">-->
-    <link href="/assets/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--materialize icons-->
 
 
     <%= csrf_meta_tags %>
 
+    <!-- Link to the CSS Manifest, application.scss -->
+    <!--- Helper Method <% stylesheet_link_tag('application', :media => 'all') %> ------>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <!-- Link to the JavaScript Manifest, application.js -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
@@ -43,16 +45,8 @@
         $('.materialboxed').materialbox();
         $('.slider').slider({indicators: false});
         $(".button-collapse").sideNav();
-        $('.carousel.carousel-slider').carousel(
-          {
-            fullWidth:true
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-          });
-          //autoplay()
-          function autoplay() {
-              setTimeout(autoplay, 9500);
-              $('.carousel').carousel('next');
-          }
 
 
 

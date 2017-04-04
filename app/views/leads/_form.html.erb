@@ -1,0 +1,41 @@
+<%= form_for(lead) do |f| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :phone, placeholder: "Phone number"  %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :string , placeholder: "string" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :company, placeholder: "Company"  %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :email, placeholder: "E-mail"  %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :origin, placeholder: "Origin"  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

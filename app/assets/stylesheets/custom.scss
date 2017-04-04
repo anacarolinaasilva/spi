@@ -1,8 +1,9 @@
 // ==========================================================================
-// CSS File organization
+// === CSS File Organization ================================================
 // ==========================================================================
 
 
+//=== Fix Bug ===
 // === Fix Incompability Material vs Materialize
 /* line 21, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
 html, body {
@@ -11,6 +12,7 @@ html, body {
   line-height: 1.5;  //fix bug material & materialize typography incompabilities
 }
 ///* line 85, .rvm/gems/ruby-2.4.0/gems/material_design_lite-sass-1.0.5/vendor/assets/stylesheets/material/_typography.scss */
+
 p {
  line-height: 1.5;
 }
@@ -33,12 +35,17 @@ p {
      background-color: $fifth-color;
 }
 
-// === Layout Margin
+// === Layout Margin ===
 .row .no-margin{
   padding-bottom:10px;
 }
-
+.top-20{
+    margin-top: 20px;
+}
 .margin-bottom {
+  margin-bottom: 0px;
+}
+.margin-bottom-zero {
   margin-bottom: 0px;
 }
 .clear-10 {
@@ -59,19 +66,34 @@ p {
 .clear-80{
     margin-bottom: 80px;
 }
+.clear-70{
+    margin-bottom: 70px;
+}
+.clear-130{
+    margin-bottom: 130px;
+}
+.clear-160{
+    margin-bottom: 160px;
+}
 
-// === layout Links
+// === Layout Links ===
 a {
   color: $link-color;
 }
 
-// === Button ===
+// === Button Color ===
   .waves-effect.waves-blue .waves-ripple {
    /* The alpha value allows the text and background color
    of the button to still show through. */
     background-color: rgba(10, 95, 159, 0.65);
   }
   a.btn-floating{
+    &:hover{
+      background-color: rgba(10, 95, 159, 0.65) !important;
+    }
+  }
+
+  .btn {
     &:hover{
       background-color: rgba(10, 95, 159, 0.65) !important;
     }
@@ -85,8 +107,59 @@ a {
   }
 
 
-// === SPI Borescopes Customization Starts Here ===
+  //=== Start Forms ===
 
+  /* label color */
+   .input-field label {
+     color: $secondary-color !important;
+   }
+   .input-field input{
+     border-radius: 15px !important;
+     background-color: #fff;
+     padding-left: 10px;
+   }
+
+  // type: text
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+       color: $secondary-color;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid $secondary-color;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+  // type: email
+  .input-field input[type=email]:focus + label {
+      color: $secondary-color;
+  }
+  /* label underline focus color */
+  .input-field input[type=email]:focus {
+    border-bottom: 1px solid $secondary-color;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+   // /* valid color */
+   // .input-field input[type=text].valid {
+   //   border-bottom: 1px solid $secondary-color;
+   //   box-shadow: 0 1px 0 0 #000;
+   // }
+   // /* invalid color */
+   // .input-field input[type=text].invalid {
+   //   border-bottom: 1px solid $secondary-color;
+   //   box-shadow: 0 1px 0 0 #000;
+   // }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: $secondary-color;
+   }
+  //=== End Forms ===
+
+
+// ==========================================================================
+// ================== SPI Borescopes Customization Starts Here ==============
+// ==========================================================================
 
 
 // === Start Header ===
@@ -181,7 +254,6 @@ a.button-collapse {
 }
 
 
-
 .phone-number {
   color: $primary-color;
   font-size: $text-large;
@@ -232,7 +304,9 @@ span.header-wrap{
     display: inline-block;
 }
 
-
+.fullwidth{
+  width: 100%;
+}
 
 h2.header-1 {
     text-transform: uppercase;
@@ -251,11 +325,7 @@ h3.header-2 {
   color: $text-color-gray !important;
   border-bottom: 2px solid $text-color-yellow;
 }
-//=== End Header
-
-
-
-
+//=== End Header ===
 
 
 // === Start Menu ===
@@ -316,6 +386,7 @@ nav ul li a:active{
 
 // === End Menu ===
 
+
 // === Start Slider ===
 #section2{
   background-color: #eeeeee;
@@ -370,11 +441,7 @@ nav ul li a:active{
       font-size: 24px;
 
     }
-
-
-
 }
-
 
 .caption-slider-top h1.header-slider{
    font-size: 2.6vw;
@@ -421,53 +488,6 @@ nav ul li a:active{
 }
 
 
-
-
-/* label color */
- .input-field label {
-   color: $secondary-color !important;
- }
- .input-field input{
-   border-radius: 15px !important;
-   background-color: #fff;
-   padding-left: 10px;
- }
-
-// type: text
- /* label focus color */
- .input-field input[type=text]:focus + label {
-     color: $secondary-color;
- }
- /* label underline focus color */
- .input-field input[type=text]:focus {
-   border-bottom: 1px solid $secondary-color;
-   box-shadow: 0 1px 0 0 #000;
- }
-
-// type: email
-.input-field input[type=email]:focus + label {
-    color: $secondary-color;
-}
-/* label underline focus color */
-.input-field input[type=email]:focus {
-  border-bottom: 1px solid $secondary-color;
-  box-shadow: 0 1px 0 0 #000;
-}
-
- // /* valid color */
- // .input-field input[type=text].valid {
- //   border-bottom: 1px solid $secondary-color;
- //   box-shadow: 0 1px 0 0 #000;
- // }
- // /* invalid color */
- // .input-field input[type=text].invalid {
- //   border-bottom: 1px solid $secondary-color;
- //   box-shadow: 0 1px 0 0 #000;
- // }
- /* icon prefix focus color */
- .input-field .prefix.active {
-   color: $secondary-color;
- }
 
 
 
@@ -536,7 +556,7 @@ nav ul li a:active{
 }
 
 .carousel-slider{
-  height: 210px !important;
+  height: 240px !important;
 }
 //======
 
@@ -656,6 +676,7 @@ nav ul li a:active{
   font-size: 24px;
   margin: -1.0rem 0 1.0rem 0;
   font-family: $text-font-thin;
+  letter-spacing: 2px;
 }
 
 .easy-steps p{
@@ -675,11 +696,22 @@ nav ul li a:active{
   margin-top: -45px;
 }
 
+  .contact-us{
+      margin-left: 40px;
+  }
+  .pick-date{
+      margin-left: 60px;
+  }
+  .we-deliver{
+      margin-left: 20px;
+  }
+
+
 .easy-steps-caption-bottom{
   color:#fff;
   text-transform: uppercase;
   font-size: 60px;
-  margin: 0.625rem 0 -0.63rem 0;
+  margin: 0.625rem 0 -0.9rem 0;
   font-family: $text-font-bold !important;
   letter-spacing: 1px;
   text-align: center;
@@ -704,6 +736,7 @@ nav ul li a:active{
     text-align: center;
     font-family: $text-font-thin;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 
@@ -711,6 +744,44 @@ nav ul li a:active{
   background: $sixth-color;
 }
 // === End Free Demo Program ===
+
+
+
+
+
+//=== Start Partners ===
+.partners{
+  img{
+      width:100%;
+  }
+}
+
+.partners-wrap{
+  width:100%;
+  position:relative;
+  margin-top:110px;
+  margin-bottom: 160px;
+}
+
+//=== End Partners ===
+
+
+//=== Catalog Wrap ===
+.catalog-wrap{
+  background: url('spi-borescopes-product-pricing-catalog.jpg');
+  background-size: cover;
+  height: auto;
+  max-height: 740px;
+  width:100px;
+
+}
+
+figure.fixedratio {
+  padding-top: 50%;  /* 450px/800px = 0.5625 */
+}
+
+
+//=== End Catalog Wrap === 
 
 .header-download{
    text-transform: uppercase;
@@ -728,3 +799,22 @@ nav ul li a:active{
 .uppercase{
   text-transform: uppercase;
 }
+
+// ==========================================================================
+// === Contact Us ===========================================================
+// ==========================================================================
+
+
+// ==========================================================================
+// === About Us =============================================================
+// ==========================================================================
+
+
+// ==========================================================================
+// === Demo Now =============================================================
+// ==========================================================================
+
+
+// ==========================================================================
+// === Products =============================================================
+// ==========================================================================
