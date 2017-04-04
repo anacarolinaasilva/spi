@@ -55,11 +55,11 @@ class LeadsController < ApplicationController
     end
   end
 
- # def additional
- # I need two different forms! _form_additional
- #
- #
- # end
+  # def additional
+  # I need two different forms! _form_additional
+  #
+  #
+  # end
 
   # DELETE /leads/1
   # DELETE /leads/1.json
@@ -72,15 +72,15 @@ class LeadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lead
-      @lead = Lead.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lead
+    @lead = Lead.find(params[:id])
+  end
 
-    # Strong Parameters
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def lead_params
-      params.require(:lead).permit(:name, :phone, :string, :company, :email, :origin)
-    end
+  # Strong Parameters
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def lead_params
+    params.require(:lead).permit(:name, :phone, :string, :company, :email, :origin)
+  end
 
 end

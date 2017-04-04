@@ -38,3 +38,4 @@ production:
   database: dbrd7rvedqdojv
   username: qjfajfouogbslk
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  

@@ -87,9 +87,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-
   #Action_Mailer
-  config.action_mailer.default_url_options = { :host => 'pure-fortress-36651.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'fathomless-escarpment-22258.herokuapp.com' }
 
   #Sending emails using ActionMailer and Gmail
   config.action_mailer.delivery_method = :smtp
