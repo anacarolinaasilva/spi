@@ -49,6 +49,9 @@ gem 'material_design_icons'
 gem 'font-awesome-sass'
 gem "figaro"
 gem 'actionmailer', '~> 5.0', '>= 5.0.2'
+gem 'sendgrid'
+gem 'mailgun-ruby', '~>1.1.4'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

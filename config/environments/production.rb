@@ -92,13 +92,14 @@ Rails.application.configure do
 
   #Sending emails using ActionMailer and Gmail
   config.action_mailer.delivery_method = :smtp
-  # SMTP settings for gmail
+  # Specify your ActionMailer settings to point to SendGrid’s servers.
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
-   :port                 => 587,
-   :user_name            => ENV['gmail_username'],
-   :password             => ENV['gmail_password'],
-   :authentication       => "plain",
+   :address              => ENV['SEND_GRID_ADDRESS'],
+   :port                 => ENV['SMTP_PORT'],
+   :domain               => ENV['APP_DOMAIN'],
+   :user_name            => ENV['SEND_GRID_USERNAME'],
+   :password             => ENV['SEND_GRID_PASSWORD'],
+   :authentication       => :plain,
   :enable_starttls_auto => true
   }
 
