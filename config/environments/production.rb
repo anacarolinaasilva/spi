@@ -86,7 +86,7 @@ Rails.application.configure do
 
 
   #Action_Mailer
-  config.action_mailer.default_url_options = { :host => 'YOURAPP.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'secure-forest-10004.heroku.com' }
 
   #Sending emails using ActionMailer and Gmail
   config.action_mailer.delivery_method = :smtp
