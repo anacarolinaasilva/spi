@@ -27,7 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -54,5 +54,20 @@ Rails.application.configure do
 
   #Action_Mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
+
+  #Sending emails using Mailgun and Gmail
+  config.action_mailer.delivery_method = :mailgun
+  # Specify your ActionMailer settings to point to SendGrid’s servers.
+  config.action_mailer.mailgun_settings = {
+   :address              => "smtp.mailgun.org",
+   :port                 => 587,
+   :domain               => ENV['DOMAIN_MAILGUN'],
+   :user_name            => ENV['USERNAME_MAILGUN'],
+   :password             => ENV['PASSWORD_MAILGUN'],
+   :authentication       => :plain,
+   :enable_starttls_auto => true
+  }
 
 end

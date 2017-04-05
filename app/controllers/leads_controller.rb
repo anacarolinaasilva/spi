@@ -30,7 +30,7 @@ class LeadsController < ApplicationController
       if @lead.save
 
         # Sends email to user when user is created.
-        LeadNoticeMailer.lead_alert_email(@lead).deliver
+        #LeadNotifierMailer.send_lead_alert_email(@lead).deliver
 
         format.html { redirect_to @lead, notice: 'Lead was successfully created.' } #redirect_to @lead ??
         format.json { render :show, status: :created, location: @lead }  #???

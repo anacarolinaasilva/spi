@@ -91,16 +91,17 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'fathomless-escarpment-22258.herokuapp.com' }
 
   #Sending emails using ActionMailer and Gmail
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :mailgun
   # Specify your ActionMailer settings to point to SendGrid’s servers.
   config.action_mailer.smtp_settings = {
-   :address              => ENV['SEND_GRID_ADDRESS'],
-   :port                 => ENV['SMTP_PORT'],
-   :domain               => ENV['APP_DOMAIN'],
-   :user_name            => ENV['SEND_GRID_USERNAME'],
-   :password             => ENV['SEND_GRID_PASSWORD'],
+   :address              => "smtp.mailgun.org",
+   :port                 => 587,
+   :domain               => ENV['DOMAIN_MAILGUN'],
+   :user_name            => ENV['USERNAME_MAILGUN'],
+   :password             => ENV['PASSWORD_MAILGUN'],
    :authentication       => :plain,
-  :enable_starttls_auto => true
+   :enable_starttls_auto => true
   }
+
 
 end
